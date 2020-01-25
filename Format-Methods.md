@@ -34,3 +34,30 @@
 {:<6s}	| string aligned to the left that many spaces	| '{:<6s}'.format('Py') → 'Py    '
 {:>6s}	| string aligned to the right that many spaces	| '{:<6s}'.format('Py') → '    Py'
 {:^6s}	| string centered in that many spaces	| '{:<6s}'.format('Py') → '  Py '
+
+# Formatted string literals
+This feature was added in Python 3.6.
+
+A formatted string literal or f-string is a string that starts with 'f' or 'F' before the quotes. These strings might contain {} placeholders using expressions like the ones used for format method strings.
+
+The important difference with the format method is that it takes the value of the variables from the current context, instead of taking the values from parameters.
+
+Examples:
+
+```python
+>>> name = "Micah"
+
+>>> print(f'Hello {name}')
+
+Hello Micah
+
+>>> item = "Purple Cup"
+
+>>> amount = 5
+
+>>> price = amount * 3.25
+
+>>> print(f'Item: {item} - Amount: {amount} - Price: {price:.2f}')
+
+Item: Purple Cup - Amount: 5 - Price: 16.25
+```
